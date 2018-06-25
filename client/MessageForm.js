@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './MessageForm.css';
-
+import { Component } from 'react'
 
 class MessageForm extends Component {
     constructor(props) {
