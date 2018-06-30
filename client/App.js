@@ -18,7 +18,7 @@ class App extends Component {
     render() {
         return this.state.name !== '' ? (
           this.renderLayout()
-        ) : this.renderUserForm() // zaimplementowane w późniejszej części
+        ) : this.renderUserForm() 
     }
     renderLayout() {
        return (
@@ -67,6 +67,10 @@ class App extends Component {
         this.setState({messages});
         socket.emit('message', message);
     }   
+    handleUserSubmit(name) {
+      this.setState({name});
+      socket.emit('join', name);
+    }
 };
 
 

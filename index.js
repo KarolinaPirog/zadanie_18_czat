@@ -30,6 +30,7 @@ io.on('connection', function(socket) {
       socket.broadcast.emit('update', {
         users: userService.getAllUsers()
       });
+    });
       socket.on('message', function(message){
         const {name} = userService.getUserById(socket.id);
         socket.broadcast.emit('message', {
@@ -37,7 +38,7 @@ io.on('connection', function(socket) {
           from: name
         });
     });
-  });
+  
 });
 
 server.listen(3000, function(){

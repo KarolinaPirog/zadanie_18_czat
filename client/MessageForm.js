@@ -6,7 +6,6 @@ class MessageForm extends Component {
     constructor(props) {
       super(props);
       this.state = {text: ''};
-      this.setState({ text : e.target.value });
     }
     
     handleSubmit(e) {
